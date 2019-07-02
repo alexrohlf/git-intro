@@ -1,0 +1,91 @@
+\documentclass{beamer}
+\mode<presentation>
+
+\usepackage{pgfpages}
+\usepackage{bbm}
+\usepackage{amsmath}
+\usepackage{amssymb} 
+\usepackage{amsthm}
+\usepackage{epsfig}
+\usepackage{graphicx}
+
+\graphicspath{{./figures/}}
+
+\makeatletter 
+\def\newblock{\beamer@newblock} 
+\makeatother  
+
+% set color and font of frametitles
+\setbeamercolor{frametitle}{fg=blue}
+\setbeamerfont{frametitle}{series=\bfseries}
+
+\newcommand{\red}[1]{{\color{red} #1}}
+\newcommand{\blue}[1]{{\color{blue} #1}}
+\newcommand{\avg}[1]{\left\langle #1 \right\rangle}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% SETTINGS
+
+% set item type and color
+\setbeamercolor{item}{fg=black}  % set color
+\setbeamertemplate{itemize items}[circle] % if you want a circle
+\setbeamertemplate{itemize subitem}[ball] % if you wnat a ball
+\setbeamertemplate{itemize subsubitem}[triangle] % if you want a triangle
+
+% set spacing for itemize
+\setbeamertemplate{itemize/enumerate subbody begin}{\vspace{0.1cm}}
+\setbeamertemplate{itemize/enumerate subbody end}{\vspace{0.1cm}}
+
+%% END SETTINGS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% remove navigation symbols
+\beamertemplatenavigationsymbolsempty 
+
+\title{Version control management and research collaboration using git and github}
+\subtitle{An introduction}
+\author{APSIS group}
+\institute{MCC Berlin}
+\date{July 11th, 2019}
+
+\AtBeginSection[]
+  {
+     \begin{frame}<beamer>
+     \frametitle{}
+     \tableofcontents[currentsection]
+     \end{frame}
+  }
+
+\begin{document}
+
+\maketitle
+
+
+
+\section{Why}
+
+% ==============================================================
+\begin{frame}
+\frametitle{Why use version control in research?}
+
+- keeping some order in the mess
+- sharing and collaborating
+
+
+\end{frame}
+%--------------------------------------------------------------
+
+\section{How}
+
+% ==============================================================
+\begin{frame}
+\frametitle{How to use version control}
+
+
+\end{frame}
+%--------------------------------------------------------------
+
+
+\end{document}
+
+
