@@ -17,11 +17,13 @@
 
 % set color and font of frametitles
 \setbeamercolor{frametitle}{fg=blue}
-\setbeamerfont{frametitle}{series=\bfseries}
+%\setbeamerfont{frametitle}{series=\bfseries}
 
 \newcommand{\red}[1]{{\color{red} #1}}
 \newcommand{\blue}[1]{{\color{blue} #1}}
 \newcommand{\avg}[1]{\left\langle #1 \right\rangle}
+
+\newcommand{\code}[1]{{\fontfamily{pcr}\selectfont \textbf{#1}}}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% SETTINGS
@@ -61,25 +63,166 @@
 \maketitle
 
 
-
-\section{Why}
+\section{What is git and github?}
 
 % ==============================================================
 \begin{frame}
+\frametitle{What is version control management?}
+
+Software to keep track of the history and different versions of files within project folders
+
+\end{frame}
+%--------------------------------------------------------------
+
+
+% ==============================================================
+\begin{frame}
+\frametitle{What is git?}
+
+\begin{itemize}
+\item git is a program for version control
+
+\item designed for distributed software development
+
+\item created by Linus Torvalds for his work on the Linux kernel
+\end{itemize}
+
+Explain idea of a git repository
+
+\end{frame}
+%--------------------------------------------------------------
+
+\begin{frame}
+\frametitle{What is github?}
+
+Explain the idea of a remote repository
+
+Explain github (and providers of remote repositories like gitlab, bitbucket, SourceForge, Launchpad ...)
+
+\end{frame}
+
+
+\section{Why should I use it?}
+
+\begin{frame}
 \frametitle{Why use version control in research?}
 
-- keeping some order in the mess
-- sharing and collaborating
+\begin{itemize}
+\item getting some order in the mess
+\begin{itemize}
+\item data
+\item software code/scripts
+\item manuscripts for papers 
+\end{itemize}
+
+\item sharing your code or 
+
+\item collaborating
+\end{itemize}
+
+\end{frame}
+%--------------------------------------------------------------
+
+\section{How can I use it?}
+
+% ==============================================================
+\begin{frame}
+\frametitle{Starting a repository}
+
+
+\code{git init}
+
+\code{git clone}
+
+\end{frame}
+%--------------------------------------------------------------
+
+% ==============================================================
+\begin{frame}
+\frametitle{Managing the repository}
+
+\code{git status}
+
+\code{git diff}
+
+staging:
+
+\code{git add [--all]}
+
+\code{git commit [-a]}
+
+\end{frame}
+%--------------------------------------------------------------
+
+% ==============================================================
+\begin{frame}
+\frametitle{Interacting with remote repositories}
+
+\code{git pull}
+
+\code{git push}
 
 
 \end{frame}
 %--------------------------------------------------------------
 
-\section{How}
+% ==============================================================
+\begin{frame}
+\frametitle{Branches and merges}
+
+explain what branches are
+
+\code{git branch}
+
+\code{git merge \emph{branchname}}
+
+\end{frame}
+%--------------------------------------------------------------
 
 % ==============================================================
 \begin{frame}
-\frametitle{How to use version control}
+\frametitle{Further useful commands and tools}
+
+.gitignore file
+
+GUIs: e.g. gitg, SourceTree, etc.
+
+https://rogerdudler.github.io/git-guide/
+
+
+\end{frame}
+%--------------------------------------------------------------
+
+% ==============================================================
+\begin{frame}
+\frametitle{}
+
+{\huge
+Questions?
+}
+
+\end{frame}
+%--------------------------------------------------------------
+
+% ==============================================================
+\begin{frame}
+\frametitle{Practice / task}
+
+\begin{itemize}
+\item clone remote repository with
+
+\code{git clone https://github.com/mcc-apsis/git-intro.git}
+
+\item add some question or feedback to the presentation in the file
+
+\item add and commit changes
+
+\item pull changes already made by other
+
+\item push your own changes
+\end{itemize}
+
+
 
 
 \end{frame}
