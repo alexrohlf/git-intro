@@ -127,9 +127,86 @@ Explain github (and providers of remote repositories like gitlab, bitbucket, Sou
 
 % ==============================================================
 \begin{frame}
-\frametitle{Starting a repository}
+\frametitle{Git Workflow (simplest)}
 
-Command line vs. GUIs (gitg, SourceTree, GitHub Desktop etc.)
+\begin{columns}
+	\begin{column}{0.618\linewidth}
+		\begin{figure}
+			\includegraphics[width=\linewidth]{images/local-workflow}
+		\end{figure}
+	\end{column}
+	\begin{column}{0.382\linewidth}
+		\begin{itemize}
+			\item<1-> Keep track of changes in a folder on your computer
+			\item<2-> Changes are stored as lines added and removed
+			\item<3-> No need to save multiple versions of the same file; you have recorded all changes and can view or revert these at any time
+		\end{itemize}
+	\end{column}
+\end{columns}
+
+
+\end{frame}
+%--------------------------------------------------------------
+
+% ==============================================================
+\begin{frame}
+\frametitle{Git + Github Workflow (simplest)}
+
+\begin{columns}
+	\begin{column}{0.55\linewidth}
+		\begin{figure}
+			\includegraphics[width=\linewidth]{images/remote-workflow}
+		\end{figure}
+	\end{column}
+	\begin{column}{0.45\linewidth}
+		\begin{itemize}
+			\item<1-> Attach your repository to a remote version
+			\item<2-> If working with collaborators, they also can make a copy (\code{clone}) on their machine
+			\item<3-> By both using \code{pull}, you can keep up to date with each others' changes
+			\item<4-> For more complicated workflows, especially where maintaining a working version is critical, check out branching \url{https://guides.github.com/introduction/flow/}
+		\end{itemize}
+	\end{column}
+\end{columns}
+
+
+\end{frame}
+%--------------------------------------------------------------
+
+
+
+% ==============================================================
+\begin{frame}
+\frametitle{Tools}
+
+\begin{columns}[t]
+	\begin{column}{0.5\linewidth}
+		\textbf{Command Line}
+		\begin{itemize}
+			\item Easy to document/explain
+			
+			\begin{figure}
+				\includegraphics[width=\linewidth]{images/git-terminal}
+			\end{figure}
+			
+			Steeper learning curve, but more flexible and harder to do things unintentionally
+		\end{itemize}
+	\end{column}
+
+	\begin{column}{0.5\linewidth}
+		\textbf{GUIs}
+		\begin{itemize}
+			\item Easy to use
+			
+			\begin{figure}
+				\includegraphics[width=\linewidth]{example-image}
+			\end{figure}
+			
+			Often there are integrations in development environments, e.g. RStudio, Atom
+		\end{itemize}
+	\end{column}
+\end{columns}
+
+
 
 \end{frame}
 %--------------------------------------------------------------
@@ -139,8 +216,17 @@ Command line vs. GUIs (gitg, SourceTree, GitHub Desktop etc.)
 \begin{frame}
 \frametitle{Starting a repository}
 
+To start working with a repository, either turn an existing folder into a git repository
+
+\medskip
 
 \code{git init}
+
+\medskip
+
+or copy an existing repository into a folder
+
+\medskip
 
 \code{git clone}
 
@@ -237,6 +323,16 @@ Questions?
 
 
 
+
+\end{frame}
+%--------------------------------------------------------------
+
+
+% ==============================================================
+\begin{frame}
+\frametitle{References}
+
+\bibliography{bibliography.bib}
 
 \end{frame}
 %--------------------------------------------------------------
