@@ -24,3 +24,5 @@ work is to be open-source, or if closed-source repositories are limited to 3 col
 ### GitHub Desktop
 
 If you are using Windows or Mac, you may want to download the GitHub Desktop app https://help.github.com/en/desktop/getting-started-with-github-desktop/installing-github-desktop
+
+Installing GitHub Desktop comes with an installation of git as well.
