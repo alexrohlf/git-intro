@@ -16,4 +16,11 @@ GUI tools
 
 ### GitHub
 
-Set up a GitHub account
+Set up a GitHub account https://github.com/join.
+
+A free account is sufficient if your
+work is to be open-source, or if closed-source repositories are limited to 3 collaborators.
+
+### GitHub Desktop
+
+If you are using Windows or Mac, you may want to download the GitHub Desktop app https://help.github.com/en/desktop/getting-started-with-github-desktop/installing-github-desktop
