@@ -226,7 +226,7 @@ To start working with a repository, either turn an existing folder into a git re
 
 \medskip
 
-or copy an existing repository into a folder
+or copy an existing remote repository into a folder on your machine
 
 \medskip
 
@@ -309,11 +309,17 @@ or copy an existing repository into a folder
 
 \par\noindent\hrulefill\par	
 
-	\code{git checkout}
+	\code{git checkout} takes you to another commit, or another branch of the repository
+	
+	\medskip
+	
+	\code{git checkout master} takes you back to the most recent commit on the master branch
 	
 	
 \end{frame}
 %--------------------------------------------------------------
+
+
 
 % ==============================================================
 %\begin{frame}
@@ -334,14 +340,41 @@ or copy an existing repository into a folder
 \begin{frame}
 \frametitle{Interacting with remote repositories}
 
-\code{git pull}
+If you started a repository on your computer, you can associate it with an \textit{empty} GitHub repository. Follow the instructions on Github: 
 
-\code{git push}
+\bigskip
 
-Warning: careful with copyrighted materials in public repositories
+\code{git remote add origin https://github.com/mcallaghan/blablabala.git}
 
-forking and pull request for working on repository for which you are no collaborator
+\medskip
 
+\code{git push -u origin master }
+
+\bigskip
+
+Now your local repository exists online, where it's current status and entire history is reflected.
+
+\medskip
+
+N.B. when dealing with the public domain, don't forget licenses (of your and other people's work).
+
+\end{frame}
+%--------------------------------------------------------------
+
+\begin{frame}
+	\frametitle{Interacting with remote repositories}
+		
+	\code{git pull} downloads all of the changes (commits) that are published in the remote version, and incorporates them (as long as they do not clash with your changes) into your local copy
+	
+	Merging is normally done automatically, but you may need to choose between different versions if they have both changed the same lines of code 
+	
+	\par\noindent\hrulefill\par		
+	
+	\code{git push} adds all of your committed changes to the remote version (as long as your version contains all of the changes in the remote - you need to \code{pull} first)
+	
+	\bigskip
+	You can only \code{push} to repositories you have the correct permissions for, but you can make a \code{pull request} (a suggestion that your changes be merged into the master) for any repository. This allows changes to be reviewed and tested before incorporation.
+	
 \end{frame}
 %--------------------------------------------------------------
 
@@ -349,10 +382,18 @@ forking and pull request for working on repository for which you are no collabor
 \begin{frame}
 \frametitle{Further useful commands and tools}
 
-.gitignore file
+\begin{itemize}
+	\item \code{.gitignore} - A list of files, or patterns for git to ignore
+	\item \href{https://guides.github.com/activities/citable-code/}{Zenodo} lets you get a citable DOI for your code/data
+	\item \href{https://guides.github.com/features/pages/}{GitHub Pages} allows you to quickly turn your repository into a static website
+	\item \href{https://github.com/mcc-apsis/git-intro/blame/master/slides/presentation.tex}{Blame} lets you trace, line by line, who contributed which parts of the code, and when
+	
+\end{itemize}
 
-create doi for citations:
-https://guides.github.com/activities/citable-code/
+Github also has nice tools for making wikis and tracking issues, among other things.
+
+
+
 
 \end{frame}
 %--------------------------------------------------------------
@@ -373,17 +414,19 @@ Questions?
 \frametitle{Practice / task}
 
 \begin{itemize}
-\item clone remote repository with
+\item Make a new project folder, and initialise a git repository with \code{git init}
 
-\code{git clone https://github.com/mcc-apsis/git-intro.git}
+\item Add a README.md file with some text in it.
 
-\item add some question or feedback to the presentation in the file
+\item Stage and commit your changes with \code{git add}, and \code{git commit}
 
-\item add and commit changes
+\item Make a new empty repository on Github \url{https://github.com/new}
 
-\item pull changes already made by other
+\item Follow the instructions to add this remote to your local repository with \code{git remote add origin [link]} and push your changes \code{git push -u origin master}
 
-\item push your own changes
+\item Find a partner, add each other as collaborators, edit each other's repositories, and push changes.
+
+
 \end{itemize}
 
 
