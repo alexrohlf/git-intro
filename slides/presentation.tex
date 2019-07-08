@@ -8,6 +8,7 @@
 \usepackage{amsthm}
 \usepackage{epsfig}
 \usepackage{graphicx}
+\usepackage{natbib}
 
 \graphicspath{{./figures/}}
 
@@ -133,6 +134,7 @@ Explain github (and providers of remote repositories like gitlab, bitbucket, Sou
 	\begin{column}{0.618\linewidth}
 		\begin{figure}
 			\includegraphics[width=\linewidth]{images/local-workflow}
+			\caption{ \cite{Blischak2016}}
 		\end{figure}
 	\end{column}
 	\begin{column}{0.382\linewidth}
@@ -235,34 +237,97 @@ or copy an existing repository into a folder
 
 % ==============================================================
 \begin{frame}
+	\frametitle{Editing a respository}
+	
+	\begin{itemize}
+		\item<1-> Edit files (write some new code or a nice new paragraph)
+		
+\par\noindent\hrulefill\par
+		
+		\item<2-> Stage changes (tell git about the changes you want record)
+		
+		\begin{itemize}
+			\item \code{git add -A}
+			\item Or add only certain files using patterns or exact file names
+		\end{itemize}
+		
+		\par\noindent\hrulefill\par
+		
+		\item<3-> Commit changes (make a timestamped version of the repository, recording all the changes you have told git about)
+		\begin{itemize}
+			\item \code{git commit -m "made a cool new graph"}
+			\item It's best if each commit describes a discrete change, and has an interpretable name.
+		\end{itemize}
+		
+		\par\noindent\hrulefill\par
+	\end{itemize}
+	
+	
+\end{frame}
+%--------------------------------------------------------------
+
+% ==============================================================
+\begin{frame}
 \frametitle{Managing the repository}
 
-\code{git status}
+\textbf{Where are we?}
 
-\code{git diff}
+\medskip
 
-staging:
+\code{git status} tells us which files have changed and are staged or unstaged:
 
-\code{git add [--all]}
+\only{\begin{figure}
+	\includegraphics[width=0.8\linewidth]{images/git-status}
+\end{figure}}<1>
 
-\code{git commit [-a]}
+
+\par\noindent\hrulefill\par
+
+\textbf{What's changed?}
+
+\code{git diff} lets us know the difference between the files we could stage, and the staged version of them
+
+\only{\begin{figure}
+	\includegraphics[width=0.8\linewidth]{images/git-diff}
+\end{figure}}<2>
+
+\only{\code{git diff} can also tell us about the difference between variously specified versions of files}<3>
+
 
 \end{frame}
 %--------------------------------------------------------------
 
 % ==============================================================
 \begin{frame}
-\frametitle{Branches and merges}
+	\frametitle{Navigating different versions}
+	
+	\code{git log} shows us a list of all the commits that have been made.
+	
+	\only{\begin{figure}
+			\includegraphics[width=0.8\linewidth]{images/git-log}
+	\end{figure}}<1->
 
-explain what branches are
+\par\noindent\hrulefill\par	
 
-\code{git branch}
-
-\code{git merge \emph{branchname}}
-
-\code{git checkout}
-
+	\code{git checkout}
+	
+	
 \end{frame}
+%--------------------------------------------------------------
+
+% ==============================================================
+%\begin{frame}
+%\frametitle{Branches and merges}
+%
+%explain what branches are
+%
+%\code{git branch}
+%
+%\code{git merge \emph{branchname}}
+%
+%\code{git checkout}
+%
+%\end{frame}
 %--------------------------------------------------------------
 
 % ==============================================================
@@ -332,7 +397,8 @@ Questions?
 \begin{frame}
 \frametitle{References}
 
-\bibliography{bibliography.bib}
+\bibstyle{unsrt}
+\bibliography{bibliography}
 
 \end{frame}
 %--------------------------------------------------------------
