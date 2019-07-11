@@ -50,6 +50,9 @@
 \author{APSIS group}
 \institute{MCC Berlin}
 \date{July 11th, 2019}
+\titlegraphic{\includegraphics[width=3cm]{images/Git-logo.png}\hspace*{1cm}~%
+   \includegraphics[width=1.5cm]{images/github-logo.png}
+}
 
 \AtBeginSection[]
   {
@@ -64,13 +67,42 @@
 \maketitle
 
 
-\section{What is git and GitHub?}
+\section{What is git and GitHub and why to use them?}
 
 % ==============================================================
 \begin{frame}
-\frametitle{What is version control management?}
+\frametitle{What is version control?}
 
-Software to keep track of the history and different versions of files within project folders
+
+\begin{columns}
+	\begin{column}{0.75\linewidth}
+
+A software (component) to keep track of the history of revisions and/or different versions of files, e.g. documents or programs
+
+\bigskip
+
+Revision are associated with a person and timestamp
+
+\bigskip
+
+Dependencies between versions as a graph
+
+\bigskip
+
+Version control system: standalone software to record changes to files
+
+\bigskip
+
+Most used systems: git, Apache Subversion (SVN), CVS, other commercial systems
+
+	\end{column}
+		\begin{column}{0.25\linewidth}
+		\begin{figure}
+			\includegraphics[width=\linewidth]{images/Revision_controlled_project_visualization.png}
+			Source: wikipedia.org
+		\end{figure}
+	\end{column}
+\end{columns}
 
 \end{frame}
 %--------------------------------------------------------------
@@ -80,51 +112,124 @@ Software to keep track of the history and different versions of files within pro
 \begin{frame}
 \frametitle{What is git?}
 
-\begin{itemize}
-\item git is a program for version control
+\bigskip
 
-\item designed for distributed software development
+An open source version control system designed for distributed software development
 
-\item created by Linus Torvalds for his work on the Linux kernel
-\end{itemize}
+\bigskip
 
-Explain idea of a git repository
+Created in 2005 by Linus Torvalds for his work on the Linux kernel
+
+\bigskip
+
+Repository: directory managed with git, contains the entire version history in hidden .git folder
+
+\vspace{1cm}
+
+		\begin{figure}
+			\includegraphics[width=0.3\linewidth]{images/Git-logo.png}
+		\end{figure}
 
 \end{frame}
+
 %--------------------------------------------------------------
 
 \begin{frame}
 \frametitle{What is GitHub?}
 
-Explain the idea of a remote repository
+\bigskip
 
-Explain github (and providers of remote repositories like gitlab, bitbucket, SourceForge, Launchpad ...)
+Hosting provider of public and private remote repositories
+
+\bigskip
+
+Remote repository: shared, central repository that collaborators can compare their local repositories to
+
+\bigskip
+
+Provides also functionality for documentation (wiki) and bug reporting and tracking
+
+\bigskip
+
+Alternative providers: GitLab, BitBucket, SourceForge, Launchpad, etc.
+
+
+\begin{figure}
+	\includegraphics[width=0.2\linewidth]{images/github-logo.png}
+\end{figure}
 
 \end{frame}
 
+%--------------------------------------------------------------
 
-\section{Why should I use it?}
 
 \begin{frame}
 \frametitle{Why use version control in research?}
 
-\begin{itemize}
-\item getting some order in the mess
+
+Get some order in the mess of projects by routinely keeping track of changes in
 \begin{itemize}
 \item data
 \item software code/scripts
-\item manuscripts for papers 
+\item manuscripts for papers
 \end{itemize}
 
-\item sharing your code or 
+\bigskip
 
-\item collaboration and attribution of work
-\end{itemize}
+Share and publish code, data and documents
+
+\bigskip
+
+Make collaboration easier and attribution of work transparent
+
 
 \end{frame}
 %--------------------------------------------------------------
 
-\section{How can I use it?}
+\begin{frame}
+\frametitle{Example 1: https://github.com/mcc-apsis/git-intro}
+
+\begin{figure}
+	\includegraphics[width=0.95\linewidth]{images/git-intro.png}
+\end{figure}
+
+
+\end{frame}
+%--------------------------------------------------------------
+
+
+\begin{frame}
+\frametitle{Example 2: https://github.com/mcc-apsis/plpr-scraper/}
+
+\begin{figure}
+	\includegraphics[width=0.95\linewidth]{images/plpr-scraper1.png}
+\end{figure}
+
+\end{frame}
+
+%--------------------------------------------------------------
+
+\begin{frame}
+\frametitle{Example 2: https://github.com/mcc-apsis/plpr-scraper/}
+
+\begin{figure}
+	\includegraphics[width=0.75\linewidth]{images/plpr-scraper3.png}
+\end{figure}
+
+\end{frame}
+%--------------------------------------------------------------
+
+\begin{frame}
+\frametitle{Example 2: https://github.com/mcc-apsis/plpr-scraper/}
+
+\begin{figure}
+	\includegraphics[width=0.8\linewidth]{images/plpr-scraper4.png}
+\end{figure}
+
+\end{frame}
+%--------------------------------------------------------------
+
+\section{How can I use git and GitHub?}
 
 % ==============================================================
 \begin{frame}
